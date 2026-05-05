@@ -4,7 +4,7 @@ from app.core.config import settings
 client = AsyncIOMotorClient(settings.mongo_url)
 db = client[settings.db_name]
 
-# Collections (like tables in SQL)
+users_collection = db["users"]
 chargers_collection = db["chargers"]
 bookings_collection = db["bookings"]
-users_collection    = db["users"]
+weather_cache_collection = db["weather_cache"]
